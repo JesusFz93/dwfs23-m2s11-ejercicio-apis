@@ -10,5 +10,17 @@ const llamarApiAsyncAwait = async () => {
     console.log(error);
   }
 };
-
 llamarApiAsyncAwait();
+
+// const llamarApiThen = () => {
+//   fetch(URL)
+//     .then((respuesta) => {
+//       console.log(respuesta);
+//     })
+//     .then((respuesta) => {
+//       console.log(respuesta);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// };
