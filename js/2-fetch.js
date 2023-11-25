@@ -1,8 +1,10 @@
-const URL = "https://pokeapi.co/api/v2/pokemon/pikachu";
+const input_pokemon = document.getElementById("input_pokemon");
 
 const llamarApiAsyncAwait = async () => {
   try {
-    const respuesta = await fetch(URL);
+    const respuesta = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${input_pokemon.value}`
+    );
     const data = await respuesta.json();
 
     console.log(data);
@@ -10,7 +12,8 @@ const llamarApiAsyncAwait = async () => {
     console.log(error);
   }
 };
-llamarApiAsyncAwait();
+
+// llamarApiAsyncAwait();
 
 // const llamarApiThen = () => {
 //   fetch(URL)
