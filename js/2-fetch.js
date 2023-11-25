@@ -1,10 +1,9 @@
 const input_pokemon = document.getElementById("input_pokemon");
 
 const llamarApiAsyncAwait = async () => {
+  const URL = `https://pokeapi.co/api/v2/pokemon/${input_pokemon.value}`;
   try {
-    const respuesta = await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${input_pokemon.value}`
-    );
+    const respuesta = await fetch(URL);
     const data = await respuesta.json();
 
     console.log(data);
