@@ -56,11 +56,16 @@ const actualizarProducto = async () => {
 
 const eliminarProducto = async () => {
   try {
-    const resp = await fetch(`${URL}/6`, {
+    const resp = await fetch(`${URL}/32`, {
       method: "DELETE",
     });
     const json = await resp.json();
-    console.log(json);
+
+    if (json) {
+      console.log(json);
+    } else {
+      console.log("No existe el producto");
+    }
   } catch (error) {
     console.log(error);
   }
